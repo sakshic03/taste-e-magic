@@ -1,0 +1,4027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taste e Magic | Every Bite, A New Story</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #ffffff;
+    }
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;      
+  overflow-x: auto;       
+  white-space: nowrap;     
+  background: #4CA1A3;     
+  padding: 10px 20px;     
+  gap: 15px;               
+  height: auto;            
+  scrollbar-width: none;  
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;          
+}
+
+    .navbar h1 {
+      float: left;
+      color: rgb(241, 240, 240);
+      margin: 0;
+    }
+
+  .navbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  flex-shrink: 0;         
+}
+
+.navbar a:hover {
+  background-color: #3b8688;
+  color: white;
+}
+
+    .h {
+      position: relative;
+      text-align: center;
+      padding: 60px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .h video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 3;
+    }
+
+    .h .content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      color: white;
+    }
+
+    .h h2 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .h p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #3b8688;   /* black strip like railway board */
+  color: #f3f2ed;     /* yellow glowing text */
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 12px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;     /* start from outside */
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+     
+    .shop {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 30px;
+    }
+
+    .item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);    }
+
+    .item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+
+.item {
+  width: 220px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Flip card container */
+.flip-card {
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Inner wrapper */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Flip when clicked */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Front (image side) */
+.flip-card-front {
+  background: #fff;
+}
+.flip-card-front img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Back (info side) */
+.flip-card-back {
+  background: #f8f8f8;
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+    button {
+  background-color: #ff6600;  /* Orange color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00; /* Darker orange */
+  transform: scale(1.05);    /* Slight zoom */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+    .animated-text {
+      font-size: 30px;
+      font-weight: bold;
+  color: #4CA1A3;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      letter-spacing: 3px;
+    }
+
+    .animated-text span {
+      opacity: 0;
+      display: inline-block;
+      animation: fadeIn 0.5s forwards;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .footer {
+      background: #4CA1A3;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .contact-form {
+      background: #ffffff;
+      max-width: 600px;
+      margin: 20px auto 50px auto;
+      padding: 20px;
+      border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+   box-shadow: 0px 5px 15px rgba(0,0,0,0.2)
+      margin-bottom: 20px;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background-color: #F6E3B4;
+  color: #333333;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .contact-form button:hover {
+      background-color: #4CA1A3;
+  color: white;
+    }
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10%;
+  background: #fffaf0;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-content ul li {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.about-cta a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; 
+}
+  </style>
+
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    var dishList = "";
+    document.querySelectorAll("#selected-dishes .dish-item").forEach(item => {
+        let dishName = item.querySelector("label").innerText;
+        let qty = item.querySelector("input").value;
+        dishList += dishName + " (x" + qty + ")\n";
+    });
+
+    var phoneNumber = "8379984588"; 
+
+    var url = "https://wa.me/91" + phoneNumber + "?text=" 
+      + encodeURIComponent(
+        "Food Order Inquiry:\n\n" +
+        " Name: " + name + "\n" +
+        " Email: " + email + "\n" +
+        " Phone: " + phone + "\n\n" +
+        " Order:\n" + dishList + "\n" +
+        " Message: " + message
+      );
+
+    window.open(url, '_blank');
+}
+</script>
+
+<script>
+let selectedDishes = [];
+
+function addDish(dishName) {
+    if (!selectedDishes.includes(dishName)) {
+        selectedDishes.push(dishName);
+        updateDishList();
+    }
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+function updateDishList() {
+    let dishContainer = document.getElementById("selected-dishes");
+    dishContainer.innerHTML = ""; 
+
+    selectedDishes.forEach(dish => {
+        let div = document.createElement("div");
+        div.classList.add("dish-item");
+        div.innerHTML = `
+            <label>${dish}</label>
+            <input type="number" name="quantity-${dish}" min="1" value="1" style="width: 60px; margin-left: 10px;">
+        `;
+        dishContainer.appendChild(div);
+    });
+}
+</script>
+</body>
+</html>
+</head>
+<body>
+
+<div class="h" id="HOME">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2024/02/25/201947-916877801_large.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2><b>Taste-e-Magic –!</b></h2>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="nav-buttons">
+    <a href="#HOME">HOME</a>
+    <a href="#STARTER">STARTER</a>
+    <a href="#NORTH-INDIAN">NORTH-INDIAN</a>
+    <a href="#RICE">RICE</a>
+    <a href="#BIRYANI">BIRYANI</a>
+    <a href="#ROTI">ROTI</a>
+    <a href="#CHINESE">CHINESE</a>
+    <a href="#SOUTH-INDIAN">SOUTH-INDIAN</a>
+    <a href="#FAST-FOOD">FAST-FOOD</a>
+    <a href="#BEVERAGES">BEVERAGES</a>
+    <a href="#DESSERTS">DESSERTS</a>
+    <a href="#SPECIAL-THALI">SPECIAL-THALI</a>
+    <a href="#SEA-FOOD">SEA-FOOD</a>
+    <a href="#TANDOOR">TANDOOR</a>
+    <a href="#STREET-FOOD">STREET-FOOD</a>
+    <a href="#contact">CONTACT</a>
+     <a href="#ABOUT-US">ABOUT-US</a>
+  </div>
+  </div>
+  
+     <div class="shop" id="HOME">   
+     <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">WELCOME<br><br></span>
+    <span style="animation-delay: 0.5s;">TO<br><br></span>
+    <span style="animation-delay: 1s;"><u><b>Taste-e-Magic</b></u></span>
+    <span style="animation-delay: 1.5s;">-WHERE</span>
+    <span style="animation-delay: 2s;">EVERY BITE IS A JOURNY OF</span>
+    <span style="animation-delay: 2.5s;">FLAVORS!!✨</span>
+    </h2>
+      </div>
+
+
+<div class="marquee">
+  <span>✨ Taste e Magic Hotel ✨ Taste e Magic Hotel  ✨ Taste e Magic Hotel ✨ Taste e Magic Hotel ✨ Taste e Magic Hotel  ✨ Taste e Magic Hotel ✨ Taste e Magic Hotel ✨  </span>
+</div>
+
+
+
+   <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">STARTER</span>
+  </h2>
+  <div class="shop" id="STARTER"> 
+    
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Jamon-wild-garlic-croquetas--3654689.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3>Jamon & wild garlic croquetas</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Jamon & wild garlic croquetas</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Crispy snacks filled with creamy cheese, Spanish ham, and fresh garlic flavor.</p>
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Jamon & wild garlic croquetas')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Minted-melon-tomato-prosciutto-salad-59e2748.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3>Minted melon tomato & prosciutto salad</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Minted melon, tomato & prosciutto salad</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>A fresh salad with sweet melon, juicy tomato, salty prosciutto, and a touch of mint.</p>
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Minted melon, tomato & prosciutto salads')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Easy-pork-chive-dumplings-38ce5b1.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3> Easy pork & chive dumplings</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Easy pork & chive dumplings</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Soft dumplings stuffed with juicy pork and fresh chives, served warm and tasty..</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('easy pork & chive dumplings')">Order Now</button> 
+  </div>
+
+  
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Fig-burrata-prosciutto-tartine--128421b.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3> Fig burrata & prosciutto tartine</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Fig burrata & prosciutto tartine</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Creamy paneer curry with rich tomato gravy.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Fig,burrata & prosciutto tartine')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Duck-liver-parfait-cherry-compote-sourdough-croutes--523259e.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3>Duck liver parfait, cherry compote & sourdough crouteS</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Duck liver parfait, cherry compote & sourdough crouteS</h3>
+          <p><b>Price:</b> ₹480</p>
+          <p>Smooth duck liver parfait with sweet cherry compote on crisp sourdough.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Duck liver parfait,cherry compote & sourdough croutes')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Smoked-mackerel-on-toasted-crumpets-f31e641.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3> Smoked mackerel on toasted crumpets</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Smoked mackerel on toasted crumpets</h3>
+          <p><b>Price:</b> ₹450</p>
+          <p>Flaky smoked mackerel served on warm toasted crumpets.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Smoked mackerel on toasted crumpets')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Halloumi-carrot-orange-salad-c9114a2.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3>Halloumi carrot & orange salad</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Halloumi carrot & orange salad</h3>
+          <p><b>Price:</b> ₹390</p>
+          <p>Grilled halloumi with fresh carrot ribbons and zesty orange.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Halloumi,carrot & orange salad')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/04/Moroccan-style-vegetable-platter-9a7ce76.jpg?quality=90&webp=true&fit=750,500" alt="STARTER">
+        <h3> Moroccan-style vegetable platter</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Moroccan-style vegetable platter</h3>
+          <p><b>Price:</b> ₹420</p>
+          <p>A colorful mix of spiced Moroccan-style vegetables.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Moroccan-style vegetable platter')">Order Now</button>
+  </div>
+
+  
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdG3jyPc5Bp_cNkg_1wytarBR1Frpw2lsiIg&s" alt="STARTER">
+        <h3>Paneer Tikka</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Paneer Tikka</h3>
+          <p><b>Price:</b> ₹360</p>
+          <p>Char-grilled paneer cubes marinated in spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Paneer Tikka')">Order Now</button>
+  </div>
+  
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgjVBlOKPYOcNfYK8cccuy9BLvS7Y-gK1Jhg&s" alt="STARTER">
+        <h3> Vegetable Spring Roll</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Vegetable Spring Roll</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Crispy rolls filled with seasoned mixed vegetables.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('vegetable Spring Roll')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW98Us1zcJu_5aQypsRt7YwRDgIJRnbBCk1w&s" alt="STARTER">
+        <h3> Crispy Potato Wedges</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Crispy Potato Wedges</h3>
+          <p><b>Price:</b> ₹260</p>
+          <p>Golden fried potato wedges served with dip.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('CrispyPotato Wedges')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRV66vbTXoVWQOoJK4DVFzNBGzuzuzPHn6RA&s" alt="STARTER">
+        <h3>Hara Bhara Kebabs</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Hara Bhara Kebabs</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Spinach and green pea patties with Indian spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('hara Bhara Kebabs')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMmhfvDklUL7pwNBpP20fH5ZEBKAlX1hmwg&s" alt="STARTER">
+        <h3>Mushroom Bruschetta</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mushroom Bruschetta</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>Toasted bread topped with garlicky mushrooms.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Mushroom Bruschetta')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.ytimg.com/vi/Ec7xklXZLRM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AG2CIACuAiKAgwIABABGGUgYChVMA8=&rs=AOn4CLAb5lqyV-0--EeemXl6NNaqADQ7kg" alt="STARTER">
+        <h3>Cheesy Maggie Roll</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Cheesy Maggie Roll</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Street-style Maggi noodles wrapped with cheese in a roll.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Cheesy Maggie Roll')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWUbNlAZH0mBG6jke9YiR6Lhz2k43IigDLrA&s" alt="STARTER">
+        <h3>Dhokla Sushi</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dhokla Sushi</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>A fusion of soft dhokla rolled sushi-style.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Dhokla Sushi')">Order Now</button>
+  </div>
+
+  
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i0.wp.com/binjalsvegkitchen.com/wp-content/uploads/2015/01/Cheese-Corn-Balls-H1-WP-WT-S.jpg?ssl=1" alt="STARTER">
+        <h3> Cheese Corn Balls</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Cheese Corn Balls</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Crispy fried balls stuffed with cheese and corn.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Cheese corn Balls')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBkyxOjybx84pNhIKKItMwJ2t_fE_6-iY3A&s" alt="STARTER">
+        <h3> Chilli Baby Corn</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Chilli Baby Corn</h3>
+          <p><b>Price:</b> ₹340</p>
+          <p>Crispy baby corn tossed in spicy sauce.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chilli baby Corn')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.ytimg.com/vi/al20f9Ibwu0/maxresdefault.jpg" alt="STARTER">
+        <h3>Gobi Manchurian</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Gobi Manchurian</h3>
+          <p><b>Price:</b> ₹360</p>
+          <p>Crispy cauliflower tossed in Indo-Chinese gravy.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Gobi Manchurian')">Order Now</button>
+  </div>
+  </div>
+
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">NORTH-INDIAN</span>
+  </h2>
+  <div class="shop" id="NORTH-INDIAN"> 
+    
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-4.jpg" alt="NORTH-INDIAN">
+          <h3>Paneer Butter Masala</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Paneer Butter Masala</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Creamy tomato gravy with soft paneer cubes.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Paneer Butter Masala')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.Z-4p0keIz595EfMdwkz61wHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="NORTH-INDIAN">
+          <h3>Palak Paneer</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Palak Paneer</h3>
+          <p><b>Price:</b> ₹200</p>
+          <p>Fresh spinach curry with paneer pieces.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Palak Paneer')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://1.bp.blogspot.com/-KzKj1aBe7-k/XeeVsF5b-2I/AAAAAAAAEII/XOksle75D5IKvng5l7OMWaX9K_0hCQX7wCLcBGAsYHQ/s1600/shahi%2Bpaneerr.jpg" alt="NORTH-INDIAN">
+          <h3>Shahi Paneer</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Shahi Paneer</h3>
+          <p><b>Price:</b> ₹240</p>
+          <p>Rich cashew-cream gravy with paneer.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Shahi Paneer')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://bonmasala.com/wp-content/uploads/2022/06/Chole-Masala.jpg" alt="NORTH-INDIAN">
+        <h3>Chole</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chole</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Spicy chickpea curry in Punjabi style.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Chole')">Order Now</button>
+  </div>
+  
+  
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Authentic-Punjabi-Rajma-Recipe.jpg" alt="NORTH-INDIAN">
+        <h3>Rajma</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rajma</h3>
+          <p><b>Price:</b> ₹160</p>
+          <p>Red kidney beans in onion-tomato gravy.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Rajma')">Order Now</button>
+  </div>
+  
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.G817p1O4XLoRCtXXfHqSQgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="NORTH-INDIAN">
+        <h3>Aloo Gobi</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Aloo Gobi</h3>
+          <p><b>Price:</b> ₹140</p>
+          <p>Cauliflower and potato cooked with spices.</p>
+        </div>
+      </div>
+    </div>
+     <button onclick="addDish('aloo Gobi')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2014/08/Baingan-Bharta.jpg" alt="NORTH-INDIAN">
+        <h3>Baingan Bharta</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Baingan Bharta</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Roasted mashed brinjal cooked with masala.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Baingan Bharta')">Order Now</button>
+  </div>
+  
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.greedygourmet.com/wp-content/uploads/2013/02/dal-makhani-feature.jpg" alt="NORTH-INDIAN">
+        <h3>Dal Makhani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dal Makhani</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Black lentils slow-cooked in butter and cream.</p>
+        </div>
+      </div>
+    </div>
+     <button onclick="addDish('dal Makhani')">Order Now</button>
+  </div>
+   
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.teaforturmeric.com/wp-content/uploads/2023/01/Kadhi-08.jpg" alt="NORTH-INDIAN">
+        <h3>Kadhi Pakora</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kadhi Pakora</h3>
+          <p><b>Price:</b> ₹160</p>
+          <p>Yogurt-based curry with fried gram flour dumplings.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Kadhi Pakora')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.Q9Au0pSwH8dBYHEpXmfO6gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="NORTH-INDIAN">
+        <h3>Malai Kofta</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Malai Kofta</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Soft paneer-potato balls in creamy gravy.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('malai Kofta')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://masalaandchai.com/wp-content/uploads/2022/03/Butter-Chicken.jpg" alt="NORTH-INDIAN">
+        <h3>Butter Chicken</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Butter Chicken</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Juicy chicken in buttery tomato gravy.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Butter Chicken')">Order Now</button>
+  </div>
+
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://149433378.v2.pressablecdn.com/wp-content/uploads/2020/08/Chicken-Tikka-Masala-scaled.jpg" alt="NORTH-INDIAN">
+        <h3>Chicken Tikka Masala</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Tikka Masala</h3>
+          <p><b>Price:</b> ₹260</p>
+          <p>Grilled chicken cooked in spiced curry.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Chicken Tikka Masala')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://recipes.timesofindia.com/photo/53192600.cms" alt="NORTH-INDIAN">
+        <h3>Rogan JoshRogan Josh</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rogan JoshRogan Josh</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Kashmiri-style aromatic mutton curry.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rogan JoshRogan Josh')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.xivvSDrDs6BqzP85zZ7LxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="NORTH-INDIAN">
+        <h3>Mutton Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mutton Curry</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>Spicy mutton cooked in onion-tomato masala.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Mutton Curry')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://mapupa.com/wp-content/uploads/2024/01/Tandoori-Chicken.webp" alt="NORTH-INDIAN">
+        <h3>Tandoori Chicken</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Chicken</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Chicken marinated and roasted in tandoor.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Tandoori Chicken')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://smithakalluraya.com/wp-content/uploads/2019/04/bhindi-masala-recipe.jpg" alt="NORTH-INDIAN">
+        <h3>Bhindi Masala</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Bhindi Masala</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Stir-fried okra with onion and spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Bhindi Masala')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i1.wp.com/www.cookingfromheart.com/wp-content/uploads/2017/08/Dum-Aloo-6.jpg?resize=683%2C1024" alt="NORTH-INDIAN">
+        <h3>Dum Aloo</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dum Aloo</h3>
+          <p><b>Price:</b> ₹170</p>
+          <p>Baby potatoes simmered in rich spicy gravy.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Dum Aloo')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/03/Best-Kadai-Paneer-Recipe.jpg" alt="NORTH-INDIAN">
+        <h3>Kadai Paneer</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kadai Paneer</h3>
+          <p><b>Price:</b> ₹230</p>
+          <p>Paneer with capsicum and onion in kadai masala.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Kadai Paneer')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://spiceeats.com/wp-content/uploads/2020/07/Mutton-Fry.jpg" alt="NORTH-INDIAN">
+        <h3>Mutton Fry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mutton Fry</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Spicy, crispy fried mutton with Indian spices.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Mutton-Fry')">Order Now</button>
+    </div>
+    </div>
+
+  
+  <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+   <span style="animation-delay: 0s;">RICE</span>
+   </h2>
+  <div class="shop" id="RICE"> 
+    
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://senseandedibility.com/wp-content/uploads/2020/03/Steamed-White-Rice-IG-FB.jpg" alt="Pet-Food">
+        <h3>Steamed White Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Steamed White Rice</h3>
+          <p><b>Price:</b> ₹120</p>
+          <p>Simple, fluffy, and perfectly cooked plain white rice.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Steamed White Rice')">Order Now</button>
+    </div>
+
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://allvegconsidered.com/wp-content/uploads/2023/11/how-to-cook-brown-rice-13-500x375.jpg" alt="Pet-Food">
+        <h3>Steamed Brown Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Steamed Brown Rice</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Nutty and wholesome steamed brown rice, rich in fiber.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Steamed White Rice')">Order Now</button>
+    </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.elmundoeats.com/wp-content/uploads/2023/05/Cooked-rice-in-a-plate.jpg" alt="Pet-Food">
+        <h3>Jasmine Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Jasmine Rice</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Fragrant Thai-style jasmine rice with a soft, delicate texture.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Jasmine Rice')">Order Now</button>
+    </div>
+
+    
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i0.wp.com/www.chitrasfoodbook.com/wp-content/uploads/2016/01/how-to-cook-basmati-rice-in-pressure-cooker-1.jpg?w=1200&ssl=1" alt="Pet-Food">
+        <h3>Basmati Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Basmati Rice</h3>
+          <p><b>Price:</b> ₹170</p>
+          <p>Long-grain aromatic basmati rice, light and fluffy.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Basmati Rice')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.eazypeazymealz.com/wp-content/uploads/2022/12/wild-rice-pilaf-17-500x500.jpg">
+        <h3>Wild Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Wild Rice</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Nutty, earthy wild rice with a chewy texture and rich taste.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Wild Rice')">Order Now</button>
+    </div>
+
+    
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.sharmispassions.com/wp-content/uploads/2018/03/chicken-fried-rice7.jpg" alt="Pet-Food">
+        <h3>Chicken Fried Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Fried Rice</h3>
+          <p><b>Price:</b> ₹250</p>
+          <p>Wok-tossed rice with tender chicken, egg, and veggies.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Chicken Fried Rice')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8S7d6So1zHB15lN90mk5HJJ3lxnE27oJ4w&s" alt="Pet-Food">
+        <h3>Egg Fried Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Egg Fried Rice</h3>
+          <p><b>Price:</b> ₹200</p>
+          <p>Classic fried rice with scrambled eggs and spring onions.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Egg Fried Rice')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyz5zvSufETZz4-kmG34qnvGWFAx96toHGsQ&s" alt="Pet-Food">
+        <h3>Vegetable Fried Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Vegetable Fried Rice</h3>
+          <p><b>Price:</b> ₹190</p>
+          <p>Colorful fried rice with fresh seasonal vegetables.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Vegetable Fried Rice')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-y9WKDvRZY200kO4Ab53fBvmAfpwc9uGYQ&s" alt="Pet-Food">
+        <h3>Beef Fried Rice </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Beef Fried Rice </h3>
+          <p><b>Price:</b> ₹270</p>
+          <p>Hearty fried rice with juicy beef strips and soy flavors.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Beef Fried Rice')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZGcGHhBLohyuExilLakI2vF0L9mOh2F5H_6wTzKGwuLVCk2hr4APEnWuQVsaAFALpIs&usqp=CAU" alt="Pet-Food">
+        <h3>Rice with Butter Chicken</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Butter Chicken</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Creamy butter chicken served over fragrant rice.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rice with Butter Chicken')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJIok6zrZD0Ed82vNUmK4nIwk5whToe0i_IA&s" alt="Pet-Food">
+        <h3>Rice with Chicken Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Chicken Curry</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Spicy and flavorful chicken curry paired with rice.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rice with Chicken Curry')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOWBNY7vLSfYFm-xDYUfuuz5bI68UjJcaCbg&s" alt="Pet-Food">
+        <h3>Rice with Lamb Korma</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Lamb Korma</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>Rich and mildly spiced lamb korma with steamed rice.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rice with Lamb Korma')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://greenhealthycooking.com/wp-content/uploads/2014/11/Thai-Green-Curry.jpg" alt="Pet-Food">
+        <h3>Rice with Thai Green Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Thai Green Curry</h3>
+          <p><b>Price:</b> ₹330</p>
+          <p>Aromatic Thai green curry served with jasmine rice.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rice with Thai Green Curry')">Order Now</button>
+    </div>
+
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9zmqmHfd9rD6CFN-b8UrdV3G2fHvmmI1MiQ&s" alt="Pet-Food">
+        <h3>Rice with Japanese Katsu Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Japanese Katsu Curry</h3>
+          <p><b>Price:</b> ₹340</p>
+          <p>Crispy chicken katsu topped with Japanese curry over rice.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Rice with Japanese Katsu Curry')">Order Now</button>
+    </div>
+
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngMjT61B_uzR11GN2hx3X_kDHCB_yLRVclQ&s" alt="Pet-Food">
+        <h3>Rice with Chili Paneer</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rice with Chili Paneer</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Spicy Indo-Chinese chili paneer served on rice.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Rice with Chili Paneer')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEOR2DjBc8phn9DbmERWs1rmRe9nXI4uIFVA&s" alt="Pet-Food">
+        <h3>Sushi Rice Bowl</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Sushi Rice Bowl</h3>
+          <p><b>Price:</b> ₹360</p>
+          <p>Seasoned sushi rice topped with fresh veggies and proteins.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Sushi Rice Bowl')">Order Now</button>
+    </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbCHI8rsAPzwmrnU_r_67VLM-w0MDabtuMlg&s" alt="Pet-Food">
+        <h3>Risotto</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Risotto</h3>
+          <p><b>Price:</b> ₹380</p>
+          <p>Creamy Italian risotto cooked with parmesan and stock.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Risotto')">Order Now</button>
+    </div>
+  </div>
+ 
+   <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+   <span style="animation-delay: 0s;">BIRYANI</span>
+   </h2>
+  <div class="shop" id="BIRYANI">   
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-006.jpg" alt="BIRYANI">
+        <h3>Chicken Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Biryani</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Fragrant basmati rice cooked with tender chicken and spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Biryani')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoIycguxFgTpIN3L00tYQhJ2WkypXj5w_QkQ&s" alt="BIRYANI">
+        <h3>Hyderabadi Chicken Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Hyderabadi Chicken Biryani</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Authentic Hyderabadi layered biryani with rich spices and chicken.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Hyderabadi Chicken Biryani')">Order Now</button>
+  </div>
+
+        <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse4.mm.bing.net/th/id/OIP.m3RA4wxq_rCjHEZCdfx6cgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BIRYANI">
+        <h3>Keema Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Keema Biryani</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Aromatic rice cooked with spiced minced meat and herbs.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Keema Biryani')">Order Now</button>
+  </div>
+
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse3.mm.bing.net/th/id/OIP.W_jE-_0a1btwW_hI9YF7iwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BIRYANI">
+        <h3>Paneer Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Paneer Biryani</h3>
+          <p><b>Price:</b> ₹260</p>
+          <p>Flavorful biryani made with marinated paneer cubes and basmati rice.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Paneer Biryani')">Order Now</button>
+  </div>
+
+  
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg" alt="BIRYANI">
+        <h3>Vegetable Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Vegetable Biryani</h3>
+          <p><b>Price:</b> ₹240</p>
+          <p>Colorful biryani with seasonal vegetables and fragrant spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Vegetable Biryani')">Order Now</button>
+  </div>
+
+         <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/10/Prawn-Biryani.jpg" alt="BIRYANI">
+        <h3>Prawn Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Prawn Biryani</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>Succulent prawns cooked in aromatic spices with basmati rice.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Prawn Biryani')">Order Now</button>
+  </div>
+
+           <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.mapsofindia.com/ci-moi-images/my-india/2014/07/Fish-Biryani.jpg" alt="BIRYANI">
+        <h3>Fish Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Fish Biryani</h3>
+          <p><b>Price:</b> ₹340</p>
+          <p>Delicious fish fillets layered with spiced rice and herbs.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Fish Biryani')">Order Now</button>
+  </div>
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.pavaniskitchen.com/wp-content/uploads/2021/04/egg-biryani-recipe-1024x1024.jpg" alt="BIRYANI">
+        <h3>Egg Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Egg Biryani</h3>
+          <p><b>Price:</b> ₹250</p>
+          <p>Basmati rice with boiled and spiced eggs, cooked to perfection.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Egg Biryani')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/MuttonBiryani.webp" alt="BIRYANI">
+        <h3>Mutton Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mutton Biryani</h3>
+          <p><b>Price:</b> ₹370</p>
+          <p>Juicy mutton pieces slow-cooked with basmati rice and spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Mutton Biryani')">Order Now</button>
+  </div>
+
+        <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse4.mm.bing.net/th/id/OIP.NyfHDOQg_pzw-juvKJljHAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BIRYANI">
+        <h3>Mumbai Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mumbai Biryani</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Spicy and tangy Mumbai-style biryani with rich flavors.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Mumbai Biryani')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://th.bing.com/th/id/R.ce913386ec0ca6e2d283f5222e00be04?rik=MlxQetVVnoGZNg&riu=http%3a%2f%2fwww.scratchingcanvas.com%2fwp-content%2fuploads%2f2018%2f04%2fChicken-Biryani.7.jpg&ehk=3bsEgE%2fOyqPWB5U%2f4ClrcYv9NazBsgB%2fMr0oHGIzAis%3d&risl=&pid=ImgRaw&r=0" alt="BIRYANI">
+        <h3>Kolkata Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kolkata Biryani</h3>
+          <p><b>Price:</b> ₹320</p>
+          <p>Lightly spiced Kolkata biryani with potatoes, egg, and fragrant rice.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Kolkata Biryani')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse4.mm.bing.net/th/id/OIP.MagBXKknTdFuLOtJ-W5LuQHaFX?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BIRYANI">
+        <h3>Lucknowi (Awadhi) Biryani</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Lucknowi (Awadhi) Biryani</h3>
+          <p><b>Price:</b> ₹350</p>
+          <p>Royal Awadhi biryani with subtle spices and a nawabi touch.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Lucknowi (Awadhi) Biryani')">Order Now</button>
+  </div>
+    </div>
+
+   <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+   <span style="animation-delay: 0s;">ROTI</span>
+   </h2>
+  <div class="shop" id="ROTI">
+    
+        <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQghGysvRo1IY3UC2kWyX0JSEwZRR8PCwEmmA&s" alt="ROTI">
+        <h3>Plain Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Plain Roti</h3>
+          <p><b>Price:</b> ₹90</p>
+          <p>Simple whole wheat roti, soft and light.</p>
+        </div>
+      </div>
+    </div>
+       <button onclick="addDish('Plain Rot')">Order Now</button>
+  </div>
+
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQghGysvRo1IY3UC2kWyX0JSEwZRR8PCwEmmA&s" alt="ROTI">
+        <h3>Tandoori Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Roti</h3>
+          <p><b>Price:</b> ₹130</p>
+          <p>Crisp and smoky roti cooked in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+        <button onclick="addDish('Tandoori Roti')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTku2gI1M0qanzsNqt7EKTjhishmRABzQC4Cw&s" alt="ROTI">
+        <h3>Roomali Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Roomali Roti</h3>
+          <p><b>Price:</b> ₹120</p>
+          <p>Thin, soft, and large handkerchief-style roti.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Roomali Roti')">Order Now</button>
+  </div>
+
+  
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfC5pCyPYLHKYtwL12MFJxmY7ynBzRcJ9ENw&s" alt="ROTI">
+        <h3>Makki di Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Makki di Roti</h3>
+          <p><b>Price:</b> ₹140</p>
+          <p>Punjabi-style maize flour roti, best with sarson da saag.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Makki di Roti')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsvL085SjADnnuvkRZU2pF8EPmMufyzE30Mw&s" alt="ROTI">
+        <h3>Butter Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Butter Roti</h3>
+          <p><b>Price:</b> ₹110</p>
+          <p>Soft roti brushed with melted butter.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Butter Roti')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtslS-PxqYb8ZzmqeezwRkG0JbGEW2ntEQg&s" alt="ROTI">
+        <h3>Garlic Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Garlic Roti</h3>
+          <p><b>Price:</b> ₹130</p>
+          <p>Roti flavored with fresh garlic and butter.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Garlic Roti')">Order Now</button>
+  </div>
+
+  
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi3OJ2KPQd_3nDcLtTntEMfLRjRF-STSBFxQ&s" alt="ROTI">
+        <h3>Masala Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Masala Roti</h3>
+          <p><b>Price:</b> ₹120</p>
+          <p>Spiced whole wheat roti with herbs and seasonings.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Masala Roti')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeAFL6E0giK2vecg8JHAGLqFzR24S-HSP2pg&s" alt="ROTI">
+        <h3>Cheese Roti</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Cheese Roti</h3>
+          <p><b>Price:</b> ₹160</p>
+          <p>Roti stuffed with gooey melted cheese.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Cheese Roti')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLZ7K3zDimLSh_zPQzYJpxsLuKFFlohsgjhQ&s" alt="ROTI">
+        <h3>Naan</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Naan</h3>
+          <p><b>Price:</b> ₹140</p>
+          <p>Traditional tandoor-baked naan bread.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Naan')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/10/kulcha-recipe-1.jpg" alt="ROTI">
+        <h3>Kulcha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kulcha</h3>
+          <p><b>Price:</b> ₹130</p>
+          <p>Soft leavened bread, perfect with curries.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Kulcha')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQOqwqijn9TJJvok8di0gQJGIO8RiQKGMQQ&s" alt="ROTI">
+        <h3>Plain Paratha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Plain Paratha</h3>
+          <p><b>Price:</b> ₹100</p>
+          <p>Simple and soft plain paratha cooked on a tawa.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Plain Paratha')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT3U7av9FA151qQDIYG-NfF-LUj5NOh6KRg&s" alt="ROTI">
+        <h3>Lachha Paratha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Lachha Paratha</h3>
+          <p><b>Price:</b> ₹120</p>
+          <p>Flaky, layered paratha with buttery taste.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Lachha Paratha')">Order Now</button>
+  </div>
+
+  
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNJiuPVKv48BB7Tz2wVfLjMyLvPnatfq1vg&s" alt="ROTI">
+        <h3>Aloo Paratha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Aloo Paratha</h3>
+          <p><b>Price:</b> ₹130</p>
+          <p>Classic paratha filled with seasoned mashed potatoes.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Aloo Paratha')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://maayeka.com/wp-content/uploads/2023/12/broccoli-paneer-paratha-recipe-a.jpg" alt="ROTI">
+        <h3>Paneer Paratha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Paneer Paratha</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Soft paratha stuffed with spiced paneer.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Paneer Paratha')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.licious.in/blog/wp-content/uploads/2022/04/Keema-Paratha_24241-min-1-scaled.jpg" alt="ROTI">
+        <h3>Keema Paratha</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Keema Paratha</h3>
+          <p><b>Price:</b> ₹160</p>
+          <p>Stuffed paratha with spicy minced meat filling.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Keema Paratha')">Order Now</button>
+  </div>
+  </div>
+
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">CHINESE 🥢</span>
+  </h2>
+  <div class="shop" id="CHINESE">
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.whiskaffair.com/wp-content/uploads/2020/10/Veg-Hakka-Noodles-2-1-1200x1800.jpg" alt="CHINESE">
+        <h3>Veg Hakka Noodles</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Veg Hakka Noodles</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Stir-fried noodles with fresh vegetables and light sauces.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Veg Hakka Noodles')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tiffinandteaofficial.com/wp-content/uploads/2020/11/IMG_7663-1-scaled-e1605519663454.jpg" alt="CHINESE">
+        <h3>Chicken Hakka Noodles</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Hakka Noodles</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Classic hakka noodles tossed with chicken and veggies.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Hakka Noodles')">Order Now</button>
+  </div>
+
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.Qcw2_-3cznXoVurqDgU26QHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Schezwan Noodles</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Schezwan Noodles</h3>
+          <p><b>Price:</b> ₹200</p>
+          <p>Spicy noodles cooked with bold Schezwan flavors.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Schezwan Noodles')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.p0_SecLlfeFh5X0On9TYlgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Veg Manchurian (Dry/Gravy)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Veg Manchurian (Dry/Gravy)</h3>
+          <p><b>Price:</b> ₹190</p>
+          <p>Crispy vegetable balls served dry or in a tangy gravy.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Veg Manchurian (Dry/Gravy)')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Gbkgs2fRbdDYMmbpX2Y_MwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Chicken Manchurian (Dry/Gravy)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Manchurian (Dry/Gravy)</h3>
+          <p><b>Price:</b> ₹230</p>
+          <p>Juicy chicken dumplings tossed in Indo-Chinese sauces.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Manchurian (Dry/Gravy)')">Order Now</button>
+  </div>
+
+  
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.ap9yax7MjhrVb99Ch4E5mwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Chilli Paneer (Dry/Gravy)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chilli Paneer (Dry/Gravy)</h3>
+          <p><b>Price:</b> ₹210</p>
+          <p>Paneer cubes cooked with spicy chilli sauce and veggies.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chilli Paneer (Dry/Gravy)')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.yKtCJL2LNgppLr4YYU50CgHaEt?w=942&h=600&rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Chilli Chicken (Dry/Gravy)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chilli Chicken (Dry/Gravy)</h3>
+          <p><b>Price:</b> ₹210</p>
+          <p>Paneer cubes cooked with spicy chilli sauce and veggies.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chilli Chicken (Dry/Gravy)')">Order Now</button>
+  </div>
+
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.sugarsaltmagic.com/wp-content/uploads/2023/01/Chinese-Spring-Rolls-4FEAT.jpg" alt="CHINESE">
+        <h3>Spring Rolls</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Spring Rolls</h3>
+          <p><b>Price:</b> ₹240</p>
+          <p>Tender chicken tossed with chilli sauce, onions, and capsicum.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Spring Rolls')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.Z0DaQkkNoCVUOTIb0Avf7gHaJ3?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Veg Crispy</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Veg Crispy</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Crispy fried vegetable fritters in a tangy sauce.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Veg Crispy')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://assets-global.website-files.com/60d34b8627f6e735cf28df18/62a95eaacb8d206406f1d296_Chicken%20Lollipop%20Hero%204.3.jpg" alt="CHINESE">
+        <h3>Chicken Lollipop</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Lollipop</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Deep-fried spicy chicken wings served with Schezwan dip.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Chicken Lollipop')">Order Now</button>
+  </div>
+
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://amyinthekitchen.com/wp-content/uploads/2018/05/Hot-and-Sour-Soup-51.jpg" alt="CHINESE">
+        <h3>Hot & Sour Soup</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Hot & Sour Soup</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Spicy and tangy soup with veggies and Asian flavors.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Hot & Sour Soup')">Order Now</button>
+  </div>
+
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.uLb1FMom6M8wWcm0af6ZpwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="CHINESE">
+        <h3>Sweet Corn Soup</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Sweet Corn Soup</h3>
+          <p><b>Price:</b> ₹140</p>
+          <p>Creamy sweet corn soup with vegetables and mild seasoning.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Sweet Corn Soup')">Order Now</button>
+  </div>
+  </div>
+
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">FAST-FOOD</span>
+  </h2>
+  <div class="shop" id="FAST-FOOD"> 
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-sGsP85U_8pgkv0UvBQj1vZy95pPu6NWdfw&s" alt="FAST-FOOD">
+        <h3>Hot Dog</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Hot Dog</h3>
+          <p><b>Price:</b> ₹100</p>
+          <p>Hot Dog</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Hot Dog')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWYcUXikcIH5VOYkzO6M1Pd88KTYab5hj6JQ&s" alt="FAST-FOOD">
+        <h3>potato wedges</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>potato wedges</h3>
+          <p><b>Price:</b> ₹150</p>
+          <p>Golden crispy potato wedges served with dip.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('potato wedges')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5cwRE4h3vfxnZPndGuyhmrWpgi_lk1w7KNg&s" alt="FAST-FOOD">
+        <h3>veggie burger</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>veggie burger</h3>
+          <p><b>Price:</b> ₹220</p>
+          <p>Juicy vegetable patty with fresh veggies in a soft bun.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('veggie burger')">Order Now</button>
+  </div>
+
+        <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3sBekGZkXTL10JrgrC5TYVHz3Y9VHP1XNXg&s" alt="FAST-FOOD">
+        <h3>Burrito</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Burrito</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Stuffed tortilla with rice, beans, veggies, and sauces.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Burrito')">Order Now</button>
+  </div>
+
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.seriouseats.com/thmb/ps9BzTDAJ6tXywJw_eSZxvV_xhE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20250430-SEA-UltimateSmokedNachos-LorenaMasso-Beauty1-35-a0d81f942b394edf9137f9b2f09269a4.jpg" alt="FAST-FOOD">
+        <h3>Nachos</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Nachos</h3>
+          <p><b>Price:</b> ₹200</p>
+          <p>Crispy corn chips topped with cheese and salsa.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Nachos')">Order Now</button>
+  </div>
+
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBwC1NZB5dFmhv6q9Ru58wTyQVXm_MhrhL0w&s" alt="FAST-FOOD">
+        <h3>Taco</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Taco</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Crispy or soft taco filled with seasoned stuffing.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Taco')">Order Now</button>
+  </div>
+
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNsMACepHfmm_r6iS3x56D7nwwsUAhe4RJg&s" alt="FAST-FOOD">
+        <h3>Cheeseburger</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Cheeseburger</h3>
+          <p><b>Price:</b> ₹250</p>
+          <p>Classic beef/veg patty burger loaded with melted cheese.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Cheeseburger')">Order Now</button>
+  </div>
+
+        <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVErFVr9CFcOUFs8WJvOR-MBW1EzIVb0f1xg&s" alt="FAST-FOOD">
+        <h3>Chicken Sandwich</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Sandwich</h3>
+          <p><b>Price:</b> ₹230</p>
+          <p>Grilled chicken with lettuce, tomato, and sauces in bread.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Sandwich')">Order Now</button>
+  </div>
+
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoOt4SUrApXRJ64Tyl1t4YqKm2ZUxmlqvpag&s" alt="FAST-FOOD">
+        <h3>Roast Beef Sandwich</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Roast Beef Sandwich</h3>
+          <p><b>Price:</b> ₹270</p>
+          <p>Tender roast beef slices layered with cheese and sauce.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Roast Beef Sandwich')">Order Now</button>
+  </div>
+
+  
+
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.themodernproper.com/production/posts/2022/Homemade-French-Fries_8.jpg?w=1200&h=1200&q=60&fm=jpg&fit=crop&dm=1662474181&s=15046582e76b761a200998df2dcad0fd" alt="FAST-FOOD">
+        <h3>French Fries</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>French Fries</h3>
+          <p><b>Price:</b> ₹60</p>
+          <p>Crispy french fries.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('French Fries')">Order Now</button>
+  </div>
+            <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_b18AhX_x9OGzOALgqMRzkatTATIQB3fIww&s" alt="FAST-FOOD">
+        <h3>Pizza</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pizza</h3>
+          <p><b>Price:</b> ₹300</p>
+          <p>Cheesy baked pizza with assorted toppings.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Pizza')">Order Now</button>
+  </div>
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZJFi8pYVVwjRWr_f85Q7qTCxXQQUnb126Yw&s" alt="FAST-FOOD">
+        <h3>Chicken Pizza</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Pizza</h3>
+          <p><b>Price:</b> ₹340</p>
+          <p>Cheese pizza topped with spicy chicken and veggies.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Pizza')">Order Now</button>
+  </div>
+
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://media.istockphoto.com/id/2162005770/photo/spicy-korean-chicken-wings-with-sesame-seeds-and-chives.jpg?s=612x612&w=0&k=20&c=QzBBgYEw6p0l4eveTT2d4EQ2Q4oW6JhV5WJsT8PKtLg=" alt="FAST-FOOD">
+        <h3>Fried Chicken</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Fried Chicken</h3>
+          <p><b>Price:</b> ₹260</p>
+          <p>Crispy golden fried chicken with secret spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Fried Chicken')">Order Now</button>
+  </div>
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1F9XCywX0rWPgyfw9nCFMh0o2II6jEDDtNA&s" alt="FAST-FOOD">
+        <h3>Greek Tzatziki</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Greek Tzatziki</h3>
+          <p><b>Price:</b> ₹180</p>
+          <p>Refreshing yogurt dip with cucumber, garlic, and herbs.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Greek Tzatziki')">Order Now</button>
+  </div>
+         <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC4i2tkotulXMWPU6mRyN3T7jhZ3dIvBxdrg&s" alt="FAST-FOOD">
+        <h3>Chicken Quesadilla</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Quesadilla</h3>
+          <p><b>Price:</b> ₹280</p>
+          <p>Grilled tortilla stuffed with chicken, cheese, and spices.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Chicken Quesadilla')">Order Now</button>
+  </div>
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-500x375.webp" alt="FAST-FOOD">
+        <h3>Avocado Sandwich</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Avocado Sandwich</h3>
+          <p><b>Price:</b> ₹240</p>
+          <p>Healthy sandwich with fresh avocado and veggies.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Avocado Sandwich')">Order Now</button>
+  </div>
+  </div>
+
+<h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+   <span style="animation-delay: 0s;">SOUTH-INDIAN</span>
+   </h2>
+  <div class="shop" id="SOUTH-INDIAN">
+          <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse2.mm.bing.net/th/id/OIP.0F97HdEKl_g9xyYKFW9ZzAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SOUTH-INDIAN">
+        <h3>Idli (Plain / Butter / Rava)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Idli (Plain / Butter / Rava)</h3>
+         <p><b>Price:</b> ₹120</p>
+<p>Soft steamed idlis served plain, with butter, or made with rava.</p>
+        </div>
+      </div>
+    </div>
+      <button onclick="addDish('Idli (Plain / Butter / Rava)')">Order Now</button>
+  </div>
+            <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse2.mm.bing.net/th/id/OIP.fCUGLbGfzbQW-f3C7nQ9pQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SOUTH-INDIAN">
+        <h3>Medu Vada</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Medu Vada</h3>
+<p><b>Price:</b> ₹130</p>
+<p>Crispy golden lentil fritters served with chutney and sambar.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Medu Vada')">Order Now</button>
+  </div>
+              <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.cookwithkushi.com/wp-content/uploads/2021/12/IMG_5804e.jpg" alt="SOUTH-INDIAN">
+        <h3>Dosa</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dosa</h3>
+         <p><b>Price:</b> ₹140</p>
+<p>Thin, crispy South Indian crepe served with chutney and sambar.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Dosa')">Order Now</button>
+  </div>
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse1.mm.bing.net/th/id/OIP.qxS9PcbgbDqmWy3phk8FPQHaFO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SOUTH-INDIAN">
+        <h3>Paper Masala Dosa</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Paper Masala Dosa</h3>
+         <p><b>Price:</b> ₹180</p>
+<p>Extra crispy dosa stuffed with spiced potato filling.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Paper Masala Dosa')">Order Now</button>
+  </div>
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://ministryofcurry.com/wp-content/uploads/2020/09/uttapam-4.jpg" alt="SOUTH-INDIAN">
+        <h3>Uttapam</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Uttapam</h3>
+         <p><b>Price:</b> ₹150</p>
+<p>Thick pancake-style dosa topped with onions, tomatoes, and chillies
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Uttapam')">Order Now</button> 
+ </div>
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse3.mm.bing.net/th/id/OIP.ZeDGdHb3LWKcOkMpfqjA9AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SOUTH-INDIAN">
+        <h3>Upma</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Upma</h3>
+         <p><b>Price:</b> ₹130</p>
+<p>Semolina cooked with spices, vegetables, and ghee.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Upma')">Order Now</button>
+</div>
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://img-global.cpcdn.com/recipes/e46db89bea028e6d/680x482cq70/pesarattu-or-green-moong-dosa-recipe-main-photo.jpg" alt="SOUTH-INDIAN">
+        <h3>Pesarattu</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pesarattu</h3>
+          <p><b>Price:</b> ₹160</p>
+<p>Green gram dosa served with ginger chutney.</p>
+        </div>
+      </div>
+    </div>
+       <button onclick="addDish('Pesarattu')">Order Now</button>
+</div>
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://th.bing.com/th/id/R.ca5b16055fd0fc7085cd2d3b9e72f0a4?rik=lgGFsZdydBszNw&riu=http%3a%2f%2fmaayeka.com%2fwp-content%2fuploads%2f2013%2f09%2fPuliyohara-tamarind-rice.jpg&ehk=zBEvcUIooBrCzOdBt3mU8R0MgLupQ6LalztSRU%2b4Tzk%3d&risl=&pid=ImgRaw&r=0" alt="SOUTH-INDIAN">
+        <h3>Tamarind Rice (Puliyodarai)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tamarind Rice (Puliyodarai)</h3>
+        <p><b>Price:</b> ₹150</p>
+<p>Tangy tamarind-flavored rice with South Indian spices.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tamarind Rice (Puliyodarai)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://tse1.explicit.bing.net/th/id/OIP.7rquypN6z1tACXEkkpt5cAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SOUTH-INDIAN">
+        <h3>Lemon Rice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Lemon Rice</h3>
+          <p><b>Price:</b> ₹140</p>
+<p>Zesty rice cooked with lemon juice, curry leaves, and mustard seeds.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Lemon Rice')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.cookclickndevour.com/wp-content/uploads/2017/08/sambar-vada-c.jpg" alt="SOUTH-INDIAN">
+        <h3>Sambar Vada</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Sambar Vada</h3>
+         <p><b>Price:</b> ₹150</p>
+<p>Crispy vadas soaked in hot and tangy sambar.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Sambar Vada')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/03/tomato-rasam.jpg" alt="SOUTH-INDIAN">
+        <h3>Rasam</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rasam</h3>
+         <p><b>Price:</b> ₹120</p>
+<p>Spicy, tangy South Indian soup made with tamarind and pepper.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Rasam')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+       <img src="https://www.holidify.com/images/cmsuploads/compressed/4225496824_908082352f_b_20200107183950.jpg" alt="SOUTH-INDIAN">
+        <h3>Kerala Prawn Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kerala Prawn Curry</h3>
+          <p><b>Price:</b> ₹380</p>
+<p>Juicy prawns simmered in coconut milk with Kerala spices.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Kerala Prawn Curry')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.holidify.com/images/cmsuploads/compressed/Puttu_with_kadala_curry_20200107184646.jpg" alt="SOUTH-INDIAN">
+        <h3> Puttu and Kadala Curry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Puttu and Kadala Curry</h3>
+          <p><b>Price:</b> ₹220</p>
+<p>Steamed rice flour cylinders with black chickpea curry.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Puttu and Kadala Curry')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+       <img src="https://www.chefspencil.com/wp-content/uploads/Palkatti-Chettinadu-960x960.jpg.webp" alt="SOUTH-INDIAN">
+        <h3>Palkatti Chettinadu</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Palkatti Chettinadu</h3>
+          <p><b>Price:</b> ₹260</p>
+<p>Paneer cooked Chettinad style with fiery spices.</p>
+        </div>
+      </div>
+    </div>
+       <button onclick="addDish('Palkatti Chettinadu')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+     <img src="https://www.chefspencil.com/wp-content/uploads/Chicken-Ishtu-960x1200.jpg.webp" alt="SOUTH-INDIAN">
+        <h3> Chicken Ishtu</h3> 
+        </div>
+        <div class="flip-card-back">
+        <h3> Chicken Ishtu</h3> 
+<p><b>Price:</b> ₹300</p>
+<p>Kerala-style chicken stew with coconut milk and mild spices.</p>
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Chicken Ishtu')">Order Now</button>
+</div>
+  </div>
+
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">BEVERAGES</span>
+  </h2>
+  <div class="shop" id="BEVERAGES">
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/05/indian-masala-chai-tea.webp" alt="BEVERAGES">
+        <h3>Masala Chai</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Masala Chai</h3>
+         <p><b>Price:</b> ₹60</p>
+<p>Traditional Indian spiced tea brewed with milk and aromatic spices.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Masala Chai')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://cff2.earth.com/uploads/2022/07/29091859/Green-tea-scaled.jpg" alt="BEVERAGES">
+        <h3>Green Tea</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Green Tea</h3>
+        <p><b>Price:</b> ₹80</p>
+<p>Refreshing and healthy green tea with a soothing flavor.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Green Tea')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.TR2dqRWtnf9IAsRI7LOASwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Black Tea</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Black Tea</h3>
+         <p><b>Price:</b> ₹70</p>
+<p>Strong and classic black tea served hot.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Black Tea')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://img.freepik.com/premium-photo/south-indian-filter-coffee-served-traditional-brass-stainless-steel-cup_466689-90123.jpg?w=2000" alt="BEVERAGES">
+        <h3>Filter Coffee</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Filter Coffee</h3>
+        <p><b>Price:</b> ₹90</p>
+<p>Authentic South Indian filter coffee with rich aroma.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Filter Coffee')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.awzDrZu8VfZNt5Uy8x5B5QHaLT?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Cold Coffee</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Cold Coffee</h3>
+        <p><b>Price:</b> ₹120</p>
+<p>Chilled and frothy coffee served with ice and cream.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Cold Coffee')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.M0QuWKdFA8fO9PxDek68jgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Cappuccino</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Cappuccino</h3>
+         <p><b>Price:</b> ₹150</p>
+<p>Classic Italian coffee topped with frothy milk foam.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Cappuccino')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://cdn.pixabay.com/photo/2015/09/09/17/42/coffee-932103_1280.jpg" alt="BEVERAGES">
+        <h3>Latte></h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Latte></h3>
+        <p><b>Price:</b> ₹150</p>
+<p>Smooth espresso blended with steamed milk.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Latte')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i1.wp.com/comohacercafe.com/wp-content/uploads/2020/03/espresso.jpeg" alt="BEVERAGES">
+        <h3>Espresso</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Espresso</h3>
+        <p><b>Price:</b> ₹130</p>
+<p>Strong and bold shot of pure coffee.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Espresso')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Lemon-Spiced-Tea_EXPS_HCA19_49476_B06_22_3b-1.jpg" alt="BEVERAGES">
+        <h3>Lemon Tea</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Lemon Tea</h3>
+        <p><b>Price:</b> ₹80</p>
+<p>Light and tangy black tea infused with lemon.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Lemon Tea')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.explicit.bing.net/th/id/OIP.eWSVhsY52KjAacEPDffqQQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Hot Chocolate</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Hot Chocolate</h3>
+          <p><b>Price:</b> ₹160</p>
+<p>Rich and creamy hot chocolate topped with cocoa.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Hot Chocolate')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.thealigarhchef.com/wp-content/uploads/2021/05/fresh-lime-soda-sweet-salted-1024x1024-1.jpg" alt="BEVERAGES">
+        <h3>Fresh Lime Soda</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Fresh Lime Soda</h3>
+        <p><b>Price:</b> ₹90</p>
+<p>Refreshing soda with lime juice, sweet or salted.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Fresh Lime Soda')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://thumbs.dreamstime.com/z/fresh-color-juices-smoothie-tropical-fruits-multi-violet-green-yellow-orange-red-kiwi-water-melon-strawberry-apple-orange-94902910.jpg" alt="BEVERAGES">
+        <h3>Fresh Fruit Juices</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Fresh Fruit Juices</h3>
+        <p><b>Price:</b> ₹130</p>
+<p>Seasonal fresh fruit juices served chilled.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Fresh Fruit Juices')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookclickndevour.com/wp-content/uploads/2016/05/mango-lassi-recipe-c.jpg" alt="BEVERAGES">
+        <h3>Lassi (Sweet / Salt / Mango)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Lassi (Sweet / Salt / Mango)</h3>
+       <p><b>Price:</b> ₹110</p>
+<p>Thick and refreshing yogurt-based drink in different flavors.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Lassi (Sweet / Salt / Mango)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.pinimg.com/originals/5b/5b/13/5b5b131ac445089e38c5903370d38244.png" alt="BEVERAGES">
+        <h3>Milkshakes</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Milkshakes</h3>
+        <p><b>Price:</b> ₹140</p>
+<p>Chilled milkshake blended with ice cream and flavors.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Milkshakes')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://thumbs.dreamstime.com/z/pepsi-coca-cola-sprite-fanta-soda-drinks-bucharest-romania-january-most-famous-carbonated-soft-sold-stores-66301286.jpg" alt="BEVERAGES">
+        <h3>Soft Drinks (Coke, Pepsi, Sprite)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Soft Drinks (Coke, Pepsi, Sprite)</h3>
+          <p><b>Price:</b> ₹60</p>
+<p>Carbonated soft drinks served chilled.</p>
+        </div>
+      </div>
+    </div>
+     <button onclick="addDish('Soft Drinks (Coke, Pepsi, Sprite)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.BJ2KwhZdhvz61XSg3G0e1QHaLJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Mojitos (Virgin / Mint / Strawberry)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mojitos (Virgin / Mint / Strawberry)</h3>
+          <p><b>Price:</b> ₹160</p>
+<p>Refreshing mocktails with soda, mint, and fruity flavors.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Mojitos (Virgin / Mint / Strawberry)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+         <img src="https://tse4.mm.bing.net/th/id/OIP.7IRgCHdFPNClZ_yiCICI-gHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Iced Tea (Lemon / Peach)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Iced Tea (Lemon / Peach)</h3>
+         <p><b>Price:</b> ₹120</p>
+<p>Cool and refreshing iced tea with lemon or peach flavor.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Iced Tea (Lemon / Peach)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/masala-chaas-recipe-1024x1536.jpg" alt="BEVERAGES">
+        <h3>Buttermilk (Chaas)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Buttermilk (Chaas)</h3>
+         <p><b>Price:</b> ₹70</p>
+<p>Light and cooling spiced yogurt-based drink.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Buttermilk (Chaas)')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.OXP-d1JJA4lXj0V9pHNUWwHaHb?rs=1&pid=ImgDetMain&o=7&rm=3" alt="BEVERAGES">
+        <h3>Mineral Water</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mineral Water</h3>
+         <p><b>Price:</b> ₹40</p>
+<p>Packaged drinking water bottle.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Mineral Water')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/06/Coconut-water440-c1acff0.jpg?quality=90&resize=440,400" alt="BEVERAGES">
+        <h3>Coconut water</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Coconut water</h3>
+        <p><b>Price:</b> ₹80</p>
+<p>Fresh and natural tender coconut water.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Coconut water')">Order Now</button>
+</div>          
+  </div>
+    
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">DESSERTS</span>
+  </h2>
+  <div class="shop" id="DESSERTS">
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.explicit.bing.net/th/id/OIP.KeI2UV4X01HLASoBWij6lQHaK2?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <h3> Gulab Jamun</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Gulab Jamun</h3>
+<p><b>Price:</b> ₹120</p>
+<p>Soft fried milk dumplings soaked in sugar syrup.</p>
+        </div>
+      </div>
+    </div>
+          <button onclick="addDish('Gulab Jamun')">Order Now</button>
+</div>          
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2024/03/befunky-collage-2024-03-17t105646-1710653211.jpg" alt="FOOD ">
+        <h3> Ras Malai</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Ras Malai</h3>
+<p><b>Price:</b> ₹150</p>
+<p>Spongy paneer balls served in sweet saffron milk.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Ras Malai')">Order Now</button>
+</div>          
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i0.wp.com/dishesandflavors.com/wp-content/uploads/2020/07/Jalebi.jpg?w=4216&ssl=1" alt="FOOD ">
+        <h3> Jalebi</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Jalebi</h3>
+         <p><b>Price:</b> ₹100</p>
+<p>Crispy golden spirals soaked in sugar syrup.</p>
+        </div>
+      </div>
+    </div>
+            <button onclick="addDish('Jalebi')">Order Now</button>
+</div>      
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://aartimadan.com/wp-content/uploads/2019/07/rice-kheer-recipe-images-6.jpg" alt=" FOOD">
+        <h3>Kheer </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kheer </h3>
+          <p><b>Price:</b> ₹130</p>
+<p>Creamy rice pudding flavored with cardamom and dry fruits.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Kheer')">Order Now</button>
+</div>       
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://aromaticessence.co/wp-content/uploads/2021/07/coconut_laddu_1.jpg" alt=" FOOD">
+        <h3>Ladoo </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Ladoo </h3>
+         <p><b>Price:</b> ₹110</p>
+<p>Sweet round balls made from flour, ghee, and sugar.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Ladoo')">Order Now</button>
+</div>  
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2019/11/Gajar-Ka-Halwa-2.jpg" alt=" FOOD">
+        <h3>Gajar Halwa </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Gajar Halwa </h3>
+<p><b>Price:</b> ₹140</p>
+<p>Carrot-based dessert cooked with milk, ghee, and nuts.</p>
+        </div>
+      </div>
+    </div>
+                  <button onclick="addDish('Gajar Halwa')">Order Now</button>
+</div>    
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.b_1m2cEqwVf9p0ldKxgf_gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt=" FOOD">
+        <h3>Rabri </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rabri </h3>
+         <p><b>Price:</b> ₹160</p>
+<p>Thickened sweet milk flavored with cardamom and dry fruits.</p>
+        </div>
+      </div>
+    </div>
+                  <button onclick="addDish('Rabri')">Order Now</button>
+</div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.4YFIwB9ahIQeNpB1VOAfgwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="FOOD ">
+        <h3>Malpua </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Malpua </h3>
+         <p><b>Price:</b> ₹130</p>
+<p>Sweet Indian pancake served with sugar syrup or rabri.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Malpua')">Order Now</button>
+</div>  
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/01/kulfi-recipe.jpg" alt="FOOD ">
+        <h3>Kulfi </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Kulfi </h3>
+         <p><b>Price:</b> ₹120</p>
+<p>Traditional Indian ice cream made with condensed milk.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Kulfi')">Order Now</button>
+</div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://shwetainthekitchen.com/wp-content/uploads/2020/03/IMG_8359-scaled.jpg" alt="FOOD ">
+        <h3> Shrikhand</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Shrikhand</h3>
+<p><b>Price:</b> ₹140</p>
+<p>Sweet hung curd dessert flavored with saffron and cardamom.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Shrikhand')">Order Now</button>
+</div>  
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.AUGRqEHpqiODc2Wchxgj0QHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="FOOD ">
+        <h3>Balushahi </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Balushahi </h3>
+        <p><b>Price:</b> ₹130</p>
+<p>Flaky deep-fried sweet soaked in sugar syrup.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Balushahi')">Order Now</button>
+</div>       
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://dudhratan.in/wp-content/uploads/2024/02/632260f1-e174-497a-a01c-157aa76c022e.jpg" alt=" FOOD">
+        <h3>Rasgulla </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Rasgulla </h3>
+        <p><b>Price:</b> ₹120</p>
+<p>Soft and spongy paneer balls soaked in light sugar syrup.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Rasgulla')">Order Now</button>
+</div>  
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://1.bp.blogspot.com/-rC1SzaxKnAY/Xx53ghI4XdI/AAAAAAAABhc/sX7kUlwTxlocREx_SVZud1XuVuGQK6AjwCLcBGAsYHQ/s1552/cham%2Bcham%2B13.JPG" alt=" FOOD">
+        <h3> Cham Cham</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Cham Cham</h3>
+        <p><b>Price:</b> ₹130</p>
+<p>Sweet Bengali delicacy made with paneer and khoya filling.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Cham Cham')">Order Now</button>
+</div>
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2013/10/sandesh-recipe-5.jpg" alt=" FOOD">
+        <h3> Sandesh</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Sandesh</h3>
+         <p><b>Price:</b> ₹140</p>
+<p>Soft Bengali sweet made from fresh paneer and sugar.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Sandesh')">Order Now</button>
+</div>    
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookwithkushi.com/wp-content/uploads/2021/09/ganesh-chaturthi-modak-featured.jpg" alt=" FOOD">
+        <h3>Modak </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Modak </h3>
+        <p><b>Price:</b> ₹150</p>
+<p>Traditional sweet dumpling filled with coconut and jaggery.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Modak')">Order Now</button>
+</div> 
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://4.bp.blogspot.com/-1mJPzzY7V1g/UeasW8CIHWI/AAAAAAAAHio/_YfryutN1Ds/s1600/DSC02920-001.JPG" alt="FOOD ">
+        <h3> Coconut Barfi</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Coconut Barfi</h3>
+         <p><b>Price:</b> ₹120</p>
+<p>Delicious coconut-based sweet cut into squares.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Coconut Barfi')">Order Now</button>
+</div>          
+  </div>
+    
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">SPECIAL-THALI</span>
+  </h2>
+  <div class="shop" id="SPECIAL-THALI"> 
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.T1FJY14w-pIph2hnZUhoAwHaH6?rs=1&pid=ImgDetMain&o=7&rm=3" alt="THALI">
+        <h3> Rajasthani Thali</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Rajasthani Thali</h3>
+       <p><b>Price:</b> ₹380</p>
+<p>A royal platter with dal baati churma, gatte ki sabzi, ker sangri, and sweets.</p>
+        </div>
+      </div>
+    </div>
+             <button onclick="addDish('Rajasthani Thali')">Order Now</button>
+</div>        
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.nehascookbook.com/wp-content/uploads/2022/10/Shrad-thali-WS.jpg" alt="THALI">
+        <h3> Gujarati Thali</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Gujarati Thali</h3>
+          <p><b>Price:</b> ₹350</p>
+<p>Traditional Gujarati dishes with farsan, dal, kadhi, rotis, rice, and sweets.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Gujarati Thali')">Order Now</button>
+</div> 
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.discovermyindia.in/wp-content/uploads/2023/04/punjabi-thali-image.jpg" alt="THALI">
+        <h3> Punjabi Thali</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Punjabi Thali</h3>
+        <p><b>Price:</b> ₹360</p>
+<p>Hearty thali with butter chicken, dal makhani, naan, and lassi.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="addDish('Punjabi Thali')">Order Now</button>
+</div>      
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://1.bp.blogspot.com/-0p3bJVN-F9c/X3OHviLVliI/AAAAAAAAlcU/TuL3AlxvZD8ppQRst0BNfaCxrY51MrnGwCLcBGAsYHQ/s2048/20200619_130531.jpg" alt="THALI">
+        <h3>Maharashtrian Thali </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Maharashtrian Thali </h3>
+        <p><b>Price:</b> ₹340</p>
+<p>A mix of puran poli, bhakri, varan bhaat, sabzis, and sol kadhi.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Maharashtrian Thali')">Order Now</button>
+</div>      
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://bananaleafsaigon.vn/upload/elfinder/NewFolder/South-Thali-Indian.jpg" alt="THALI">
+ <h3> South Indian Thali</h3>
+        </div>
+        <div class="flip-card-back">
+ <h3> South Indian Thali</h3>
+         <p><b>Price:</b> ₹330</p>
+<p>Aromatic sambar, rasam, poriyal, curd rice, papad, and payasam.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('South Indian Thali')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://img-global.cpcdn.com/recipes/4e6759e54cbfedc2/1200x630cq70/photo.jpg" alt="THALI">
+        <h3>North Indian Thali </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>North Indian Thali </h3>
+          <p><b>Price:</b> ₹350</p>
+<p>Combination of paneer curry, dal, chapati, rice, raita, and gulab jamun.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('North Indian Thali')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.idA2vEFXpdytmym5UnFlKQHaHB?rs=1&pid=ImgDetMain&o=7&rm=3" alt="THALI">
+        <h3> Bengali Thali</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Bengali Thali</h3>
+         <p><b>Price:</b> ₹360</p>
+<p>Includes macher jhol, shukto, luchi, rice, dal, and mishti doi.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Bengali Thali')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.pinimg.com/736x/33/d7/8e/33d78e107bb7aea1ab8fdf617ffd6b49.jpg" alt="THALI">
+        <h3>Mughlai Thali </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mughlai Thali </h3>
+           <p><b>Price:</b> ₹420</p>
+<p>Rich thali with kebabs, biryani, korma, naan, and royal desserts.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Mughlai Thali ')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i0.wp.com/deelipmenezes.com/wp-content/uploads/2021/03/IMG_1484-Edited-1024x768.jpg?resize=800%2C600&ssl=1" alt="THALI">
+        <h3>Goan Thali </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Goan Thali </h3>
+        <p><b>Price:</b> ₹370</p>
+<p>Seafood delicacies with prawn curry, sol kadhi, rice, and fried fish.</p>
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Goan Thali')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookshideout.com/wp-content/uploads/2017/03/Hyderabadi-Veg-Biryani-Thali3S-1020x1536.jpg" alt="THALI">
+        <h3> Hyderabadi Biryani Thali </h3>
+        </div>
+        <div class="flip-card-back">
+        <h3> Hyderabadi Biryani Thali </h3>
+<p><b>Price:</b> ₹400</p>
+<p>Signature Hyderabadi biryani served with salan, raita, and dessert.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Hyderabadi Biryani Thali')">Order Now</button>
+    </div>     
+    </div>
+    
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">SEA-FOOD</span>
+  </h2>
+  <div class="shop" id="SEA-FOOD">
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.shanazrafiq.com/wp-content/uploads/2022/02/Fish-fry-7.jpg" alt="SEA-FOOD">
+        <h3>Pomfret</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pomfret</h3>
+        <p><b>Price:</b> ₹420</p>
+<p>Fresh pomfret fish marinated in spices and shallow fried.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Pomfret')">Order Now</button>
+    </div>     
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://thumbs.dreamstime.com/b/delicious-crispy-king-fish-fry-also-known-as-indian-surmai-served-onion-lemon-placed-over-rustic-wooden-background-223917903.jpg" alt="SEA-FOOD">
+        <h3>King Fish (Surmai)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>King Fish (Surmai)</h3>
+         <p><b>Price:</b> ₹450</p>
+<p>Succulent surmai slices cooked with coastal masala and fried to perfection.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('King Fish (Surmai)')">Order Now</button>
+    </div> 
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://th.bing.com/th/id/OIP.992KZLJLxQ_kZdk2J2duVQHaHU?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="SEA-FOOD">
+        <h3>Mackerel (Bangda)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Mackerel (Bangda)</h3>
+         <p><b>Price:</b> ₹320</p>
+<p>Spicy and tangy bangda fish fried in traditional style.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Mackerel (Bangda)')">Order Now</button>
+    </div>     
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://1.bp.blogspot.com/-e-GOmN5ct00/X1a5uEU4HrI/AAAAAAAAYsA/mh_OPlhyyv0RUGcCXTr_hh0W_sAkvf1HwCLcBGAsYHQ/s2048/nadan%2Bprawns%2Bfry%2B1.JPG" alt="SEA-FOOD">
+        <h3>Prawns fry</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Prawns fry</h3>
+          <p><b>Price:</b> ₹380</p>
+<p>Juicy prawns marinated with spices and crisp fried.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Prawns fry')">Order Now</button>
+    </div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vd3d3LmJyaXQuY28vbWVkaWEtbGlicmFyeS9leUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGJXRm5aU0k2SW1oMGRIQnpPaTh2WVhOelpYUnpMbkppYkM1dGN5OHlNVFV6TkRreU1DOXZjbWxuYVc0dWFuQm5JaXdpWlhod2FYSmxjMTloZENJNk1UWTJNREEzTlRBNE9IMC5HaXUyX2NfR0Y4eUJPWjhaVmU4S3lXUFdjeXpoWktmV0V2a2tTaG5pUWk4L2ltYWdlLmpwZz93aWR0aD05ODAiLCJleHBpcmVzX2F0IjoxNjE0NzkzODY4fQ.CcIJmfucg7Dy9_nse_IoLVIaV1fb9oKD_XK4ZLt9MSg/img.jpg?width=2000&height=2000" alt="SEA-FOOD">
+        <h3>Crab</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Crab</h3>
+          <p><b>Price:</b> ₹500</p>
+<p>Fresh crab cooked with rich coastal spices and flavors.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Crab')">Order Now</button>
+    </div>     
+    </div>
+    
+
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+       <span style="animation-delay: 0s;">TANDOOR</span>
+  </h2>
+  <div class="shop" id="TANDOOR">
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://2.bp.blogspot.com/-neI6rKuvsKI/VyN8GMrfhzI/AAAAAAAAHls/hugFFTKYgs8lrtUSXx0iEyG-KZwL4bPbwCLcB/s1600/tandoori-paneer-tikka4.jpg" alt="tandoor">
+        <h3>Tandoori Paneer Tikka</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Paneer Tikka</h3>
+           <p><b>Price:</b> ₹280</p>
+<p>Marinated paneer cubes grilled in a tandoor with spices.</p>
+        </div>
+      </div>
+    </div>
+         <button onclick="addDish('Tandoori Paneer Tikka')">Order Now</button>   
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.theskburger.com/wp-content/uploads/2023/01/paneer-tikka-malai-easy-recipes.jpg" alt="tandoor">
+        <h3>Paneer Malai Tikka</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Paneer Malai Tikka</h3>
+<p><b>Price:</b> ₹300</p>
+<p>Soft paneer marinated in creamy malai and mild spices.</p>
+        </div>
+      </div>
+    </div>
+         <button onclick="addDish('Paneer Malai Tikka')">Order Now</button>
+    </div>   
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.jeB1DBbBe2dDrO0T4gevwAHaKZ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Tandoori Mushroom</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Mushroom</h3>
+         <p><b>Price:</b> ₹260</p>
+<p>Juicy mushrooms marinated and grilled in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tandoori Mushroom')">Order Now</button>
+    </div>  
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.ytimg.com/vi/4Z5ppYEMs-E/maxresdefault.jpg" alt="tandoor">
+        <h3>Stuffed Tandoori Capsicum</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Stuffed Tandoori Capsicum</h3>
+<p><b>Price:</b> ₹270</p>
+<p>Bell peppers stuffed with spiced filling and roasted in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Stuffed Tandoori Capsicum')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://pipingpotcurry.com/wp-content/uploads/2021/03/Tandoori-Aloo-Tikka-Piping-Pot-Curry-1-3.jpg" alt="tandoor">
+        <h3>Tandoori Aloo</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Aloo</h3>
+         <p><b>Price:</b> ₹240</p>
+<p>Baby potatoes marinated in yogurt and spices, grilled to perfection.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tandoori Aloo')">Order Now</button>
+    </div>     
+   <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://getcurried.com.au/wp-content/uploads/2020/08/TAndoori_Chicken-600x600.jpg" alt="tandoor">
+        <h3>Tandoori Chicken (Full/Half)</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Chicken (Full/Half)</h3>
+          <p><b>Price:</b> ₹480 (Full) / ₹260 (Half)</p>
+<p>Classic marinated chicken roasted in a traditional tandoor.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tandoori Chicken (Full/Half)')">Order Now</button>
+    </div>   
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://sinfullyspicy.com/wp-content/uploads/2022/02/Chicken-Malai-Tikka-Featured-Image.jpg" alt="tandoor">
+        <h3>Chicken Malai Tikka</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Malai Tikka</h3>
+<p><b>Price:</b> ₹320</p>
+<p>Tender chicken pieces marinated with cream and mild spices.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Chicken Malai Tikka')">Order Now</button>
+    </div>    
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.uYHnuc_Pk3sWYqzm4GIeNwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Tangdi Kebab</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tangdi Kebab</h3>
+        <p><b>Price:</b> ₹280</p>
+<p>Spicy and juicy chicken drumsticks cooked in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tangdi Kebab')">Order Now</button>
+    </div>   
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://i.ytimg.com/vi/582twjoXoiY/maxresdefault.jpg" alt="tandoor">
+        <h3>Afghani Chicken</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Afghani Chicken</h3>
+<p><b>Price:</b> ₹350</p>
+<p>Rich and creamy chicken dish with subtle Mughlai spices.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Afghani Chicken')">Order Now</button>
+    </div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.PO09rnWbRj-ubRPWWU3ZXQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Chicken Seekh Kebab</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chicken Seekh Kebab</h3>
+          <p><b>Price:</b> ₹300</p>
+<p>Minced chicken mixed with spices and grilled on skewers.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Chicken Seekh Kebab')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://nishkitchen.com/wp-content/uploads/2019/02/Fish-tikka-1B.jpg" alt="tandoor">
+        <h3>Fish Tikka</h3>            
+        </div>
+        <div class="flip-card-back">
+        <h3>Fish Tikka</h3>            
+         <p><b>Price:</b> ₹360</p>
+<p>Marinated fish cubes grilled with aromatic spices.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Fish Tikka')">Order Now</button>
+    </div> 
+      <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.gohealthyeverafter.com/wp-content/uploads/2022/06/Tandoori-prawn-tikka-16.jpg" alt="tandoor">
+        <h3>Tandoori Prawns</h3>    
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Prawns</h3>    
+         <p><b>Price:</b> ₹400</p>
+<p>Succulent prawns marinated in spices and grilled in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tandoori Prawns')">Order Now</button>
+    </div>   
+       <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://images.news18.com/ibnlive/uploads/2023/07/mutton-seekh-kebab-169030200216x9.jpg" alt="tandoor">
+        <h3>Mutton Seekh Kebab</h3>        
+        </div>
+        <div class="flip-card-back">
+        <h3>Mutton Seekh Kebab</h3>        
+<p><b>Price:</b> ₹380</p>
+<p>Spiced minced mutton skewered and roasted in a tandoor.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Mutton Seekh Kebab')">Order Now</button>
+    </div>      
+    <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://foodwhirl.com/wp-content/uploads/2022/09/IMG_20220723_185625-scaled.jpg" alt="tandoor">
+        <h3>Tandoori Momos</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Momos</h3>
+<p><b>Price:</b> ₹220</p>
+<p>Spicy dumplings grilled with tandoori masala for a smoky flavor.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Tandoori Momos')">Order Now</button>
+    </div>      
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.h7NBGdipdetuWfEeKaqNyAHaLI?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Tandoori Chicken Grill</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Chicken Grill</h3>
+         <p><b>Price:</b> ₹500</p>
+<p>Whole chicken marinated and grilled to smoky perfection.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Tandoori Chicken Grill')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://recipesblob.oetker.in/assets/2d2a87f7533e439aa3e6ed9bd63656e7/1272x764/tandoori-pizza.jpg" alt="tandoor">
+        <h3>Tandoori Pizza</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Tandoori Pizza</h3>
+         <p><b>Price:</b> ₹340</p>
+<p>Cheesy pizza topped with spicy tandoori-flavored toppings.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Tandoori Pizza')">Order Now</button>
+    </div>      
+    </div>
+    
+    <h2 style="text-align: center; padding-top: 30px;" class="animated-text">
+    <span style="animation-delay: 0s;">STREET-FOOD</span>
+  </h2>
+  <div class="shop" id="STREET-FOOD">  
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.pGdwZ1gWkQy6D6TwA7hOowHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Pani Puri / Golgappa</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pani Puri / Golgappa</h3>
+<p><b>Price:</b> ₹60</p>
+<p>Hollow puris filled with spicy tangy water and potato mix.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Pani Puri / Golgappa')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.LvBNnXzaUN6qYgoLoNkQFQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Sev Puri</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Sev Puri</h3>
+<p><b>Price:</b> ₹70</p>
+<p>Crispy puris topped with potato, chutneys, and sev.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Sev Puri')">Order Now</button>
+    </div>    
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6VbhrtEY-V82QYuoFsgT5SnVDhsHZrwITrcIkVi0ntNWWqcVf6b01nm3O2d9PHiUoxvLws-Txxko28uF0UsffgZ8kYCSfqgim9bcTOYVrB_zwjU2r1IQcQPLk-OKQf5JhPx23ZcuNpYP-5LqOzV96G3VzwRuTgsvLBdM-_NkZKajqkMGl4ZG5Dfz3Bw/s3419/IMG_20210321_212951.jpg" alt="tandoor">
+        <h3>Bhel Puri</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Bhel Puri</h3>
+<p><b>Price:</b> ₹60</p>
+<p>Puffed rice tossed with chutneys, onions, and sev.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Bhel Puri')">Order Now</button>
+    </div>   
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://shwetainthekitchen.com/wp-content/uploads/2020/05/IMG_8694-scaled.jpg" alt="tandoor">
+        <h3>Ragda Pattice</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Ragda Pattice</h3>
+<p><b>Price:</b> ₹90</p>
+<p>Potato patties topped with spicy white peas curry and chutneys.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Ragda Pattice')">Order Now</button>
+    </div>     
+  <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookingcarnival.com/wp-content/uploads/2017/07/Pav-bhaji-5.jpg" alt="tandoor">
+        <h3>Pav Bhaji</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pav Bhaji</h3>
+<p><b>Price:</b> ₹120</p>
+<p>Spicy mashed vegetable curry served with buttered pav.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Pav Bhaji')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://vanitascorner.com/wp-content/uploads/2020/10/Vada-Pav.jpg" alt="tandoor">
+        <h3>Vada Pav</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Vada Pav</h3>
+<p><b>Price:</b> ₹40</p>
+<p>Spicy potato vada sandwiched in a pav with chutneys.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Vada Pav')">Order Now</button>
+    </div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.foodie-trail.com/wp-content/uploads/2021/12/PHOTO-2021-11-01-08-19-11_1-rotated.jpg" alt="tandoor">
+        <h3>Misal Pav</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Misal Pav</h3>
+<p><b>Price:</b> ₹110</p>
+<p>Sprouted moth beans curry served with pav and farsan topping.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Misal Pav')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.mna7zaxaEGO-Kps_2Yt32wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="tandoor">
+        <h3>Dabeli</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dabeli</h3>
+<p><b>Price:</b> ₹60</p>
+<p>Spicy-sweet potato filling stuffed in pav with peanuts and chutneys.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Dabeli')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2023/11/Raj-Kachori-Recipe-02.jpg" alt="tandoor">
+        <h3>Raj Kachori</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Raj Kachori</h3>
+<p><b>Price:</b> ₹100</p>
+<p>Large kachori filled with potatoes, sprouts, chutneys, and yogurt.</p>
+        </div>
+      </div>
+    </div>
+  <button onclick="addDish('Raj Kachori')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://static.vecteezy.com/system/resources/previews/015/933/043/large_2x/chole-bhature-is-a-north-indian-food-dish-a-combination-of-chana-masala-and-bhatura-or-puri-free-photo.jpg" alt="tandoor">
+        <h3>Chole Bhature</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Chole Bhature</h3>
+<p><b>Price:</b> ₹140</p>
+<p>Fluffy fried bhature served with spicy chickpea curry.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Chole Bhature')">Order Now</button>
+    </div>   
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://currytown.ca/wp-content/uploads/2024/04/1-1.jpg" alt="tandoor">
+        <h3>Aloo Tikki Chaat</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Aloo Tikki Chaat</h3>
+<p><b>Price:</b> ₹80</p>
+<p>Crispy potato tikkis topped with chutneys, curd, and spices.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Aloo Tikki Chaat')">Order Now</button>
+    </div>    
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2022/06/Dahi-Puri-Recipe.jpg" alt="tandoor">
+        <h3>Dahi Puri</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Dahi Puri</h3>
+<p><b>Price:</b> ₹80</p>
+<p>Mini puris filled with potatoes, yogurt, chutneys, and sev.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Dahi Puri')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2014/11/frankie-recipe-4.jpg" alt="tandoor">
+        <h3>Frankie</h3>    
+        </div>
+        <div class="flip-card-back">
+        <h3>Frankie</h3>    
+<p><b>Price:</b> ₹100</p>
+<p>Soft roll stuffed with spiced veggies or chicken filling.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Frankie')">Order Now</button>
+    </div>     
+ <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://img.freepik.com/photos-gratuite/moong-dal-vada-egalement-mungode-pakoda-pakode-pakore-moong-wada-pakora-bhajiya-collation-heure-du-the_466689-90552.jpg?w=996&t=st=1669802623~exp=1669803223~hmac=d81da55932a32f18608c2cc4cb2e12a771b807998d3949a55909924f92abb232" alt="tandoor">
+        <h3>Pakora / Bhajiya</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Pakora / Bhajiya</h3>
+<p><b>Price:</b> ₹70</p>
+<p>Crispy fritters made with onions, potatoes, or spinach.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Pakora / Bhajiya')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/04/Bread-Pakora-1.jpg" alt="tandoor">
+        <h3>Bread Pakora</h3>
+        </div>
+        <div class="flip-card-back">
+        <h3>Bread Pakora</h3>
+<p><b>Price:</b> ₹60</p>
+<p>Bread slices stuffed with spiced filling, dipped in batter, and fried.</p>
+        </div>
+      </div>
+    </div>
+ <button onclick="addDish('Bread Pakora')">Order Now</button>
+    </div>     
+     <div class="item">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Shawarma.jpg" alt="tandoor">
+        <h3>Shawarma</h3>       
+        </div>
+        <div class="flip-card-back">
+        <h3>Shawarma</h3>       
+<p><b>Price:</b> ₹130</p>
+<p>Middle Eastern wrap filled with marinated chicken, veggies, and sauces.</p>
+        </div>
+      </div>
+    </div>
+<button onclick="addDish('Shawarma')">Order Now</button>
+    </div>               
+  </div> 
+
+  
+  <!-- CONTACT SECTION -->
+  <div id="contact">
+    <div class="footer">
+      <p>Contact us at: info@happypaws.com | Phone: 8379984587</p>
+      <p>&copy; 2025 PUP Paradise. All rights reserved.</p>
+    </div>
+
+    <div class="contact-form">
+      <h2><b><u>Food Inquiry</u></b></h2>
+      <form onsubmit="sendToWhatsApp(); return false;">
+        <label>Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label>Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+
+        <br><br>
+        <label>Food Order</label>
+       <div id="selected-dishes">
+  <!-- Selected dishes with quantities will appear here -->
+</div>
+
+        <label>Address</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Address here..." required></textarea>
+<button type="button" onclick="sendToWhatsApp()">Place Your Order</button>
+
+      </form>
+    </div>
+  </div>
+
+<div class="about" id="ABOUT-US">
+  <div class="about-content">
+    <h2 class="animated-text">
+      <span style="animation-delay: 0s;">About</span>
+      <span style="animation-delay: 0.3s;">Taste-e-Magic</span>
+    </h2>
+
+    <p>
+      At <b>Taste-e-Magic</b>, we believe food is more than just taste – 
+      it’s a journey of flavors, aromas, and memories.  
+      Our story began with a simple dream: to bring authentic recipes from our kitchen to your table, 
+      made with love, fresh ingredients, and a sprinkle of magic.
+    </p>
+
+    <ul>
+      <li>✨ Fresh, locally sourced ingredients</li>
+      <li>🍲 Signature fusion recipes you won’t find anywhere else</li>
+      <li>🥘 Spices handpicked for authentic taste</li>
+      <li>❤️ A cozy ambience for friends & family</li>
+    </ul>
+
+    <p class="about-cta">Come experience the magic — <a href="#MENU">explore our menu</a> today!</p>
+  </div>
+
+  <div class="about-image">
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg" alt="Delicious food at Taste-e-Magic">
+  </div>
+</div>
+
+
+</body>
+</html>
