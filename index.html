@@ -428,11 +428,50 @@ function updateDishList() {
   </div>
   
      <div class="shop" id="HOME">   
-<h2 style="text-align: center; padding-top: 30px; font-family: 'Georgia', serif; font-size: 42px; font-weight: bold; color: #4A2C2A;" class="animated-text">
-  <span style="animation-delay: 0s;">WELCOME<br><br></span>
-  <span style="animation-delay: 0.5s;">TO<br><br></span>
-  <span style="animation-delay: 1s;"><u><b>Taste-e-Magic</b></u></span>
-</h2>
+<head>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    .animated-text {
+      font-family: 'Poppins', sans-serif;  /* Modern clean font */
+      font-size: 36px;
+      font-weight: 600;
+      color: #006d77;   /* Teal shade matching your navbar */
+      text-align: center;
+      letter-spacing: 2px;
+      margin-top: 40px;
+    }
+
+    .animated-text span {
+      display: block;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .animated-text span:nth-child(1) { animation-delay: 0s; }
+    .animated-text span:nth-child(2) { animation-delay: 0.5s; }
+    .animated-text span:nth-child(3) {
+      animation-delay: 1s;
+      font-family: 'Great Vibes', cursive; /* Stylish script for restaurant name */
+      font-size: 50px;
+      color: #b22222;   /* Deep red for highlight */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="animated-text">
+    <span>WELCOME</span>
+    <span>TO</span>
+    <span><b>Taste-e-Magic</b></span>
+  </h2>
+</body>
       </div>
 
 
@@ -4022,6 +4061,7 @@ function updateDishList() {
 
 </body>
 </html>
+
 
 
 
